@@ -6,16 +6,7 @@ import java.util.ArrayList;
 // SAMA PERSIS seperti sebelum di-refactor.
 // =====================================================================
 
-interface Produk {
-    String getJudul();
-    String getPenulis();
-    int getHarga();
-    int getBeratGram();      // hanya masuk akal untuk buku cetak
-    String linkUnduh();      // hanya masuk akal untuk buku digital & audio
-    int getDurasiMenit();    // hanya masuk akal untuk buku audio
-}
-
-class Buku implements Produk {
+class Buku implements Produk, Dikirim, Diunduh {
     String jenis;            // "CETAK", "DIGITAL", atau "AUDIO"
     String judul;
     String penulis;

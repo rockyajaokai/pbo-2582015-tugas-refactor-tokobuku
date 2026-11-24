@@ -1,5 +1,5 @@
-// SRP: satu-satunya tugas class ini adalah mencetak struk.
-public class StrukKonsol {
+public class StrukKonsol implements StrukPrinter {
+    @Override
     public void cetak(String pelanggan, Keranjang keranjang, MetodeBayar metode,
                       int totalBelanja, int totalBayar) {
         System.out.println("================ STRUK =================");

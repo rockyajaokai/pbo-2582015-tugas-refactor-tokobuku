@@ -1,9 +1,17 @@
-// SRP: Toko hanya mengatur alur checkout.
+// Hanya mengorkestrasi alur checkout. Semua kolaborator disuntik lewat constructor.
 public class Toko {
-    private final Keranjang keranjang = new Keranjang();
-    private final StrukKonsol printer = new StrukKonsol();
-    private final EmailSender email = new EmailSender();
-    private final FileRiwayat riwayat = new FileRiwayat();
+    private final Keranjang keranjang;
+    private final StrukPrinter printer;
+    private final PenyimpanRiwayat riwayat;
+    private final PengirimNotifikasi notifikasi;
+
+    public Toko(Keranjang keranjang, StrukPrinter printer,
+                PenyimpanRiwayat riwayat, PengirimNotifikasi notifikasi) {
+        this.keranjang = keranjang;
+        this.printer = printer;
+        this.riwayat = riwayat;
+        this.notifikasi = notifikasi;
+    }
 
     public void tambah(Produk produk) {
         keranjang.tambah(produk);
@@ -16,6 +24,7 @@ public class Toko {
         printer.cetak(pelanggan, keranjang, metode, total, bayar);
 
         riwayat.simpan(pelanggan + ";" + keranjang.jumlah() + " buku;" + Rupiah.format(bayar));
-        email.kirim(alamatEmail, "Terima kasih " + pelanggan + ", total bayar " + Rupiah.format(bayar));
+        notifikasi.kirim(alamatEmail,
+                "Terima kasih " + pelanggan + ", total bayar " + Rupiah.format(bayar));
     }
 }

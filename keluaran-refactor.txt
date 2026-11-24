@@ -1,0 +1,29 @@
+================ STRUK =================
+Pelanggan : Sari
+Pemrograman Java (John Doe)
+  Harga       : Rp120.000
+  Keterangan  : 750 gram, ongkir Rp10.000
+  Harga akhir : Rp130.000
+Algoritma Dasar (Jane Smith)
+  Harga       : Rp95.000
+  Keterangan  : 400 gram, ongkir Rp5.000
+  Harga akhir : Rp100.000
+Belajar OOP (Ani Wijaya)
+  Harga       : Rp80.000
+  Keterangan  : 12.5 MB, diskon 20%
+  Harga akhir : Rp64.000
+Kisah Programmer (Budi Santoso)
+  Harga       : Rp60.000
+  Keterangan  : 240 menit, diskon 10%
+  Harga akhir : Rp54.000
+-----------------------------------------
+Total belanja : Rp348.000
+Metode bayar  : E-Wallet (diskon 2%)
+Total bayar   : Rp341.040
+Berat kiriman : 1150 gram
+-------------- LINK UNDUH ---------------
+https://toko.buku/ebook/belajar-oop
+https://toko.buku/audio/kisah-programmer
+-----------------------------------------
+[FILE riwayat.txt] Sari;4 buku;Rp341.040
+[EMAIL sari@mail.com] Terima kasih Sari, total bayar Rp341.040
